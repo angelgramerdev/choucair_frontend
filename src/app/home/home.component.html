@@ -1,0 +1,25 @@
+
+<div class="container">
+	<button type="button" class="btn btn-success" (click)="goToNewTask()">New task</button>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">Task number</th>
+				<th scope="col">Title</th>
+				<th scope="col">Description</th>
+				<th scope="col">Due date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let task of tasks; index as i">
+				<th scope="row">{{ i + 1 }}</th>
+				<td>
+					{{ task.name }}
+				</td>
+				<td>{{ task.area | number }}</td>
+				<td>{{ task.population | number }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Title</label>
+          <input type="text" name="title" [(ngModel)]="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Description</label>
+          <input type="text" name="description" [(ngModel)]="description" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group form-check">
+          <input type="date" name="dueDate" style="width:300px;border-radius: 10px;" [(ngModel)]="dueDate"  class="form-check-input" id="duedate">
+          <label class="form-check-label" for="duedate">Due date</label>
+        </div>
+
+        <button type="submit" (click)="create()" class="btn btn-success">Save</button>&nbsp;&nbsp;
+        <a href="/home">Go to main page</a>
+      </form>
+</div>
